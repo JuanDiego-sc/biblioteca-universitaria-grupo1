@@ -12,10 +12,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: biblioteca-universitaria-grupo1
-
     steps:
       # Paso 1: Clonar el repositorio
       - name: Checkout del código
@@ -53,6 +49,6 @@ jobs:
         with:
           name: Maven-Reports
           path: |
-            biblioteca-universitaria-grupo1/target/site/jacoco/jacoco.xml
-            biblioteca-universitaria-grupo1/target/checkstyle-result.xml
-            biblioteca-universitaria-grupo1/target/pmd.xml
+            target/site/jacoco/jacoco.xml
+            target/checkstyle-result.xml
+            target/pmd.xml
